@@ -164,6 +164,9 @@ function waitAtResponse(target1: string, target2: string, target3: string, timeo
     return 0
 }
 
+//% block="Envoyer Commande |SC = %SC"
+//% SC="SC"
+
 function sendAtCmd(cmd: string) {
     serial.writeString(cmd + "\u000D\u000A")
 }
