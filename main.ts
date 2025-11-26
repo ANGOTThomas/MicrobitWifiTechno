@@ -164,7 +164,7 @@ function waitAtResponse(target1: string, target2: string, target3: string, timeo
     return 0
 }
 
-//% block="Envoyer Commande |SC = %SC"
+//% block="Envoyer Commande |Command AT = %cmd"
 //% SC="SC"
 
 function sendAtCmd(cmd: string) {
