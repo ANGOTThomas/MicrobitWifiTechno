@@ -1,4 +1,4 @@
-//% color=#009b5b icon="\uf1eb" block="ESP8266 ThingSpeak"
+//% color=#009b5b icon="\uf1eb" block="ESP8266 Techno"
 namespace ESP8266Techno {
 
 
