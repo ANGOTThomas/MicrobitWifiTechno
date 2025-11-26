@@ -1,0 +1,17 @@
+{
+    "name": "pxt-esp8266_techno",
+    "version": "0.0.1",
+    "description": "Extension MakeCode pour Wifi ESP8266  Technologie Collège ThingSpeak IoT",
+    "dependencies": {
+        "core": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
