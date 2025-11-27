@@ -172,7 +172,7 @@ function waitAtResponse(target1: string, target2: string, target3: string, timeo
 //% SC="SC"
 
 
-function sendAtCmd(cmd: string) {
+export function sendAtCmd(cmd: string) {
     serial.writeString(cmd + "\u000D\u000A")
 }
 }
