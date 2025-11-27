@@ -37,9 +37,9 @@ export function setupWifi(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate
 }
 
 /**
- * Setup Grove - Uart WiFi V2 to connect to  Wi-Fi
+ * Setup Grove - Uart WiFi V2 to connect to  Wi-Fi (IP Fixed)
  */
-//% block="Setup Wifi et IP |TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
+//% block="Setup Wifi et IP |TX %txPin|RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd|IP = %adresseip|IP = %adresseip|Passerelle = %gateway|Masque = %netmask"
 //% group="UartWiFi"
 //% txPin.defl=SerialPin.P15
 //% rxPin.defl=SerialPin.P1
