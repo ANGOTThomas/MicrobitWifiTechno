@@ -44,7 +44,7 @@ export function setupWifi(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate
 //% txPin.defl=SerialPin.P15
 //% rxPin.defl=SerialPin.P1
 //% baudRate.defl=BaudRate.BaudRate115200
-export function setupWifiandIP(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string, IP: string, gateway: string , netmask: string) {
+export function setupWifiandIP(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string, adresseip: string, gateway: string , netmask: string) {
     let result = 0
 
     isWifiConnected = false
@@ -64,7 +64,7 @@ export function setupWifiandIP(txPin: SerialPin, rxPin: SerialPin, baudRate: Bau
     sendAtCmd(`AT+CWJAP="${ssid}","${passwd}"`)
     result = waitAtResponse("WIFI GOT IP", "ERROR", "None", 20000)
 
-    sendAtCmd("AT+CIPSTA="${IP}","${gateway}","${netmask})
+    sendAtCmd("AT+CIPSTA="${adresseip}","${gateway}","${netmask})
     result = waitAtResponse("OK", "ERROR", "None", 1000)
 
     if (result == 1) {
