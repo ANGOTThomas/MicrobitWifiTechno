@@ -64,7 +64,7 @@ export function setupWifiandIP(txPin: SerialPin, rxPin: SerialPin, baudRate: Bau
     sendAtCmd(`AT+CWJAP="${ssid}","${passwd}"`)
     result = waitAtResponse("WIFI GOT IP", "ERROR", "None", 20000)
 
-    sendAtCmd("AT+CIPSTA="${adresseip}","${gateway}","${netmask})
+    sendAtCmd(`AT+CIPSTA="${adresseip}","${gateway}","${netmask}"`)
     result = waitAtResponse("OK", "ERROR", "None", 1000)
 
     if (result == 1) {
@@ -140,7 +140,7 @@ export function sendToThinkSpeak(apiKey: string, field1: number, field2: number,
 //% value1.defl="hello"
 //% value2.defl="micro"
 //% value3.defl="bit"
-export function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
+function sendToIFTTT(event: string, key: string, value1: string, value2: string, value3: string) {
     let result = 0
     let retry = 2
 
